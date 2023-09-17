@@ -35,20 +35,19 @@ var buttonSound = new sound("pop.mp3");
 const synth = window.speechSynthesis; 
   	var speakText;
 
-var data1;
 var someData;
 var url="https://raw.githubusercontent.com/rohanjhunja/marathi-alphabet-activity/main/letters.txt";
 
 $.get(url).then(function(data){ 
-    data1=data; 
-    someData = JSON.parse(data1);
+    someData = JSON.parse(data);
+	console.log(someData);
 });
 
 var all = Object.keys(someData).length;
 let searchParams = new URLSearchParams(window.location.search);
 var letter = searchParams.get("letter");
 
-const result = someData.filter( ({ key }) => key === letter );
+var result = someData.filter( ({ key }) => key === letter );
 console.log(letter); 
 console.log(result);
 
