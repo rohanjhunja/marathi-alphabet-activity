@@ -18,9 +18,14 @@
 		width: 100vw; height: 100vh; display: flex; align-items: center; flex-direction:column; justify-content: space-around;
 	}
 
+	.mainImage{
+		width: 100vw; height: auto;
+	}
+
 	.gameOption{
-		height:30vh;
+		height:25vh;
 		width:auto;
+		border-radius: 10vw;
 	}
 
 	.button{
@@ -32,9 +37,9 @@
 </style>
 <body>
 
-<div id="card" class="screen"><img id = "cardImage" style="width: 100vw; height: auto;"><a id ="playButton" class="button" onclick="loadGame()">play</a></div>
-<div id="game" class="screen" style="display: none;"><div id="instruction"></div><img class="gameOption" id = "gameImage0" onclick = "checkAnswer(0)"><img class="gameOption" id = "gameImage1" onclick = "checkAnswer(1)"><img class="gameOption" id = "gameImage2" onclick = "checkAnswer(2)"></div>
-<div id='answer' class='screen' style="display: none;"><img id='answerImage' class='gameOption'><div id="answerWord"></div><a id ="playButton" class="button" onclick="resetGame()">replay</a></div>
+<div id="card" class="screen"><img id = "cardImage" class="mainImage"><a id ="playButton" class="button" onclick="loadGame()">play</a></div>
+<div id="game" class="screen" style="display: none; background-color: lightgoldenrodyellow;"><div id="instruction"></div><img class="gameOption" id = "gameImage0" onclick = "checkAnswer(0)"><img class="gameOption" id = "gameImage1" onclick = "checkAnswer(1)"><img class="gameOption" id = "gameImage2" onclick = "checkAnswer(2)"></div>
+<div id='answer' class='screen' style="display: none;"><img id='answerImage' class='mainImage'><div id="answerWord"></div><a id ="playButton" class="button" onclick="resetGame()">replay</a></div>
 
 </body>
 <script type="text/javascript">
