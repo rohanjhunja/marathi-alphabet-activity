@@ -41,7 +41,7 @@ var url="https://raw.githubusercontent.com/rohanjhunja/marathi-alphabet-activity
 $.get(url).then(function(data){ 
     data1=data; 
     someData = JSON.parse(data1);
-}
+});
 
 var all = Object.keys(someData).length;
 let searchParams = new URLSearchParams(window.location.search);
