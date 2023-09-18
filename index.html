@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 <link href='https://fonts.googleapis.com/css?family=Mukta' rel='stylesheet'>
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <script type="text/javascript">
@@ -116,14 +116,14 @@ function getRandomInt(min, max) {
 function checkAnswer(answer){
 	if(options[answer].key == letter){
 	scoreSound.play();
-	speakOut(options[answer].letter+" से "+options[answer].marathi);
+	speakOut(options[answer].letter+" जसे "+options[answer].marathi);
 	document.getElementById('game').style.display = "none";
 	document.getElementById('answer').style.display = "flex";
 	document.getElementById('answerImage').src="./Pictures/"+options[answer].key+".png";
 	document.getElementById('answerWord').innerHTML=options[answer].marathi;
 }
 else{
-	speakOut(options[answer].letter+" से "+options[answer].marathi+"। नहीं। फिर से कोशिश करें");
+	speakOut(options[answer].letter+" जसे "+options[answer].marathi+"। नाही। परत प्रयत्न करा");
 }
 
 }
